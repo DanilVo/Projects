@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap');
+
+html {
+  animation: bg-images-change 10s infinite linear;
+  animation-timing-function: steps(1);
+}
+
+@keyframes bg-images-change {
+  0% {
+    background-image: url(/images/autum-forest.jpg);
+  }
+  50% {
+    background-image: url(/images/desert-mountains.jpg);
+  }
+  100% {
+    background-image: url(/images/winter-castle.jpg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: 'Noto Sans Lao', sans-serif;
+}
+
+#header {
+  background: rgba(30, 29, 29, 0.2);
+  height: 60px;
+  width: 100%;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+div[class='search-bar'] > a > img {
+  background: #ccc;
+  width: 20px;
+  position: relative;
+  top: 12px;
+  right: -7px;
+  padding: 6px 10px;
+  border-radius: 2px 0 0 2px;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  width: 900px;
+  height: 30px;
+  border: none;
+  background: #ccc;
+}
+
+.search-bar {
+  display: inline-block;
+  position: relative;
+  bottom: 45px;
+  margin-left: 50px;
+}
+
+.search-bar > input:focus {
+  border: none;
+  box-shadow: none;
+  outline-style: none;
+}
+
+.user-enter {
+  display: inline-block;
+  position: relative;
+  bottom: 45px;
+  left: 100px;
+}
+
+.user-enter > button:nth-child(1) {
+  color: #ccc;
+  font-weight: 600;
+  font-size: large;
+  border: none;
+  background: transparent;
+}
+
+.user-enter > button:nth-child(2) {
+  border-radius: 3px;
+  border: none;
+  font-weight: 600;
+  font-size: large;
+  background: whitesmoke;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.user-enter > button:nth-child(2):hover,
+div[id='container'] > button:hover,
+.user-enter > button:nth-child(1) {
+  transition: 0.3s;
+  color: #ccc;
+  cursor: pointer;
+}
+
+img[src='/images/flickr.png'] {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  padding-left: 10px;
+  bottom: 10px;
+  right: 100px;
+}
+
+#container {
+  position: relative;
+  top: 100px;
+  right: 50%;
+  transform: translate(50%);
+}
+
+#container > p {
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+#container > p:nth-child(1) {
+  padding-top: 40px;
+  font-size: 50px;
+  line-height: 20px;
+}
+
+div[id='container'] > button {
+  background: white;
+  border: none;
+  border-radius: 2px;
+  height: 70px;
+  width: 200px;
+  font-size: x-large;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.creator {
+  position: relative;
+  color: white;
+  font-weight: 600;
+  top: 130px;
+}
+
+#footer {
+  height: 50px;
+  background: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  /* margin-bottom: 20px; */
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer > button,
+select {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ccc;
+  background: transparent;
+  border: none;
+  font-weight: 500;
+}
+
+#footer > button:hover,
+select:hover {
+  color: white;
+  cursor: pointer;
+}
+
+div[class='social'] > a > img {
+  /* position: relative; */
+  height: 20px;
+  /* right: 30px; */
+}
+
+.social {
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
+  position: relative;
+  top: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.social > a {
+  margin-left: 10px;
+  margin-right: 20px;
+}
