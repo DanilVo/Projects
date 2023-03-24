@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap");
 
 html {
   animation: bg-images-change 10s infinite linear;
@@ -8,12 +8,15 @@ html {
 @keyframes bg-images-change {
   0% {
     background-image: url(/images/autum-forest.jpg);
+    background-size: cover;
   }
   50% {
     background-image: url(/images/desert-mountains.jpg);
+    background-size: cover;
   }
   100% {
     background-image: url(/images/winter-castle.jpg);
+    background-size: cover;
   }
 }
 
@@ -24,7 +27,7 @@ body {
   height: 100%;
   width: 100%;
   text-align: center;
-  font-family: 'Noto Sans Lao', sans-serif;
+  font-family: "Noto Sans Lao", sans-serif;
 }
 
 #header {
@@ -35,7 +38,7 @@ body {
   position: relative;
 }
 
-div[class='search-bar'] > a > img {
+div[class="search-bar"] > a > img {
   background: #ccc;
   width: 20px;
   position: relative;
@@ -94,14 +97,14 @@ input {
 }
 
 .user-enter > button:nth-child(2):hover,
-div[id='container'] > button:hover,
+div[id="container"] > button:hover,
 .user-enter > button:nth-child(1) {
   transition: 0.3s;
   color: #ccc;
   cursor: pointer;
 }
 
-img[src='/images/flickr.png'] {
+img[src="/images/flickr.png"] {
   position: relative;
   width: 80px;
   height: 80px;
@@ -129,7 +132,7 @@ img[src='/images/flickr.png'] {
   line-height: 20px;
 }
 
-div[id='container'] > button {
+div[id="container"] > button {
   background: white;
   border: none;
   border-radius: 2px;
@@ -141,7 +144,9 @@ div[id='container'] > button {
 }
 
 .creator {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 700px;
   color: white;
   font-weight: 600;
   top: 130px;
@@ -178,7 +183,7 @@ select:hover {
   cursor: pointer;
 }
 
-div[class='social'] > a > img {
+div[class="social"] > a > img {
   /* position: relative; */
   height: 20px;
   /* right: 30px; */
