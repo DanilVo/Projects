@@ -1,0 +1,8 @@
+div[class="col rounded-2"], div[class="col offset-1 rounded-2"], a[class="navbar-brand rounded-circle p-2"] {
+  background-color: rgb(33, 31, 31);
+}
+
+div[class="fixed-bottom row"] {
+  background-color: rgb(30, 26, 26);
+  height: 75px;
+}
