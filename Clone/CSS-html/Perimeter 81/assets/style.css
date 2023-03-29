@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* @font-face {
+    font-family: 'Roboto';
+    src: url(/assets/fonts/Roboto-Bold.ttf);
+} */
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.headers {
+  height: 40px;
+  display: flex;
+  width: 100%;
+  background-color: #233874;
+  justify-content: end;
+  align-items: center;
+}
+
+.headers select {
+  margin-right: 80px;
+  background-color: transparent;
+  border: none;
+  color: rgb(191, 206, 235);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.headers a {
+  text-decoration: none;
+  color: rgb(191, 206, 235);
+  margin-right: 10px;
+}
+
+.sub-header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  justify-content: space-between;
+  background-color: #030d67;
+  align-items: center;
+}
+
+.sub-header .sub-header-buttons {
+  margin-right: 80px;
+}
+
+.btns {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 7px 24px 7px 24px;
+  color: white;
+}
+
+.blue-button {
+  background-color: rgb(112, 102, 228);
+  border: none;
+}
+
+.start-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #fff;
+}
+
+
+.button-start {
+    color: rgb(94, 94, 243);
+}
+
+.sub-header .p81-img {
+  margin-left: 80px;
+}
+
+.sub-header-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: large;
+}
+
+.sub-header-menu li {
+  display: inline;
+  margin-right: 40px;
+}
+
+.first-window {
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  position: absolute;
+  background-color: #030d67;
+}
+
+.window-text {
+  position: relative;
+  width: 70%;
+  margin-left: 80px;
+}
+
+.window-video > video {
+  position: relative;
+  width: 100%;
+}
+
+.window-text > p:nth-child(1) {
+  color: white;
+  font-size: 56px;
+  font-weight: 900;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.window-text > p:nth-child(2) {
+  color: rgb(191, 206, 235);
+  font-weight: 900;
+  font-size: large;
+  line-height: 35px;
+  letter-spacing: 1.5px;
+}
