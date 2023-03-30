@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-/* @font-face {
-    font-family: 'Roboto';
-    src: url(/assets/fonts/Roboto-Bold.ttf);
-} */
 
 html {
   margin: 0;
@@ -16,13 +12,32 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.accesibility {
+  position: absolute;
+  right: 5px;
+}
+
+.accesibility button {
+  background-color: blue;
+}
+
+.container {
+  position: relative;
+}
+
+.container-header {
+  position: absolute;
+}
+
 .headers {
-  height: 40px;
+  height: 30px;
   display: flex;
   width: 100%;
   background-color: #233874;
   justify-content: end;
   align-items: center;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .headers select {
@@ -31,7 +46,8 @@ body {
   border: none;
   color: rgb(191, 206, 235);
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .headers a {
@@ -41,6 +57,7 @@ body {
 }
 
 .sub-header {
+  z-index: 1;
   display: flex;
   position: sticky;
   top: 0px;
@@ -73,7 +90,6 @@ body {
   border: 1px solid #fff;
 }
 
-
 .button-start {
     color: rgb(94, 94, 243);
 }
@@ -86,20 +102,20 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 400;
-  font-size: large;
+  font-size: 16px;
 }
 
 .sub-header-menu li {
   display: inline;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .first-window {
-  margin-top: 51px;
+  /* margin-top: 51px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  position: absolute;
+  position: relative;
   background-color: #030d67;
 }
 
@@ -111,7 +127,7 @@ body {
 
 .window-video > video {
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 
 .window-text > p:nth-child(1) {
@@ -128,4 +144,10 @@ body {
   font-size: large;
   line-height: 35px;
   letter-spacing: 1.5px;
+}
+
+.second-window p {
+  text-align: center;
+  color: #626f96;
+  font-weight: 300;
 }
