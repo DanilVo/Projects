@@ -1,4 +1,4 @@
-div[class="col rounded-2"], div[class="col offset-1 rounded-2"], a[class="navbar-brand rounded-circle p-2"] {
+div[class="col rounded-2"], div[class="col offset-1 rounded-2 ms-3"], a[class="navbar-brand rounded-circle p-2"] {
   background-color: rgb(33, 31, 31);
 }
 
