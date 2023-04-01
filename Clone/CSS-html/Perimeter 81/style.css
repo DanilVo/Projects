@@ -60,7 +60,7 @@ body {
   z-index: 1;
   display: flex;
   position: sticky;
-  top: 0px;
+  top: -1px;
   justify-content: space-between;
   background-color: #030d67;
   align-items: center;
