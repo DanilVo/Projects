@@ -9,14 +9,17 @@ html {
   0% {
     background-image: url(/images/autum-forest.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
   }
   50% {
     background-image: url(/images/desert-mountains.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
   }
   100% {
     background-image: url(/images/winter-castle.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -143,13 +146,13 @@ div[id="container"] > button {
   transition: 0.5s;
 }
 
+/* adapted to laptop  */
 .creator {
-  display: flex;
+  display: relative;
   justify-content: center;
-  margin-top: 700px;
+  margin-top: 150px;
   color: white;
   font-weight: 600;
-  top: 130px;
 }
 
 #footer {
@@ -158,7 +161,6 @@ div[id="container"] > button {
   width: 100%;
   position: fixed;
   bottom: 0px;
-  /* margin-bottom: 20px; */
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -184,14 +186,11 @@ select:hover {
 }
 
 div[class="social"] > a > img {
-  /* position: relative; */
   height: 20px;
-  /* right: 30px; */
 }
 
 .social {
-  /* margin-left: 5px; */
-  /* margin-right: 5px; */
+
   position: relative;
   top: 15px;
   box-sizing: border-box;
