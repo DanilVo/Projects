@@ -45,7 +45,7 @@ div[class="search-bar"] > a > img {
   background: #ccc;
   width: 20px;
   position: relative;
-  top: 12px;
+  top: 11px;
   right: -7px;
   padding: 6px 10px;
   border-radius: 2px 0 0 2px;
@@ -150,7 +150,7 @@ div[id="container"] > button {
 .creator {
   display: relative;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 200px;
   color: white;
   font-weight: 600;
 }

@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'matrix';
+  src: url('/assets/fonts/matrix.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'matrix';
+}
+
+.container {
+  background-color: #e8e5e2;
+}
+
+header {
+  height: 100vh;
+}
+
+.bg-image {
+  background-image: url('/assets/images/matrix.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: bg-animation 10s infinite linear;
+  animation-iteration-count: infinite;
+  filter: blur(1px) brightness(25%);
+}
+
+/* .bg-image::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 200px solid #de8123;
+  border-right: 50vw solid transparent;
+}
+
+.bg-image::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom: 200px solid #f19f4d;
+  border-left: 50vw solid transparent;
+} */
+
+span {
+  color: white;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  text-align: center;
+}
+
+img[alt='Danil'] {
+  position: absolute;
+  height: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+nav {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+}
+
+main {
+  border: 1px solid black;
+  height: 50vh;
+}
+
+main::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 200px solid #e8e5e2;
+  border-right: 50vw solid transparent;
+}
+
+main::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom: 200px solid #e8e5e2;
+  border-left: 50vw solid transparent;
+}
+
+footer {
+  border: 1px solid black;
+  height: 100vh;
+}
+
+@keyframes bg-animation {
+  from {
+    background-position: bottom;
+  }
+  to {
+    background-position: top;
+  }
+}
