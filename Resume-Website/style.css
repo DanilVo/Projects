@@ -1,35 +1,53 @@
 @font-face {
-  font-family: 'Chakra Petch';
-  src: url('/assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
+  font-family: "Chakra Petch";
+  src: url("/assets/fonts/ChakraPetch-Regular.ttf") format("truetype");
 }
 
 @keyframes bg-animation {
   from {
     background-position: left;
-    background-size: 3000px;
   }
   to {
-    background-position: top;
-    background-size: 3000px;
+    background-position: right;
   }
 }
 
 /* ABOUT ME SECTION RESPONSE BY SCREEN SIZE START */
 @media screen and (min-width: 768px) {
+  .bg-image {
+    background-size: 3000px;
+  }
   .about-me {
     margin: 0px 80px 50px;
     font-weight: 700;
     font-size: 24px;
   }
+  footer {
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .bg-image {
+    background-size: 1500px;
+  }
+
   .about-me {
     margin: 0px 60px 50px;
     font-size: 16px;
   }
 }
 /* ABOUT ME SECTION RESPONSE BY SCREEN SIZE END */
+
+@keyframes skills-appears {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -38,10 +56,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Chakra Petch';
-}
-
-.container {
+  font-family: "Chakra Petch";
   background-color: #e8e5e2;
 }
 
@@ -57,13 +72,13 @@ header {
       rgba(2, 5, 4, 0.6),
       rgba(2, 7, 5, 0.6)
     ),
-    url('/assets/images/13082021-RETRO-4K.png');
+    url("/assets/images/13082021-RETRO-4K.png");
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
   animation: bg-animation 80s infinite linear;
   animation-direction: alternate;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 2px 2px black;
 }
 
 header span {
@@ -80,7 +95,8 @@ header span {
   text-shadow: 0 0 5px black;
 }
 
-img[alt='Danil'] {
+img[alt="Danil"] {
+  filter: drop-shadow(0 0 0.35rem black);
   z-index: 2;
   position: absolute;
   height: 30%;
@@ -89,7 +105,7 @@ img[alt='Danil'] {
   transform: translate(-50%, -50%);
   border-radius: 15px;
 }
-/* CONTACT ME LINKS START*/
+/* CONTACT ME NAV LINKS START*/
 nav {
   z-index: 1;
   position: fixed;
@@ -167,7 +183,7 @@ li:nth-of-type(3):hover {
   background-color: #fc5a5a;
   border-bottom-right-radius: 5px;
 }
-/* CONTACT ME LINKS END*/
+/* CONTACT ME NAV LINKS END*/
 
 main {
   height: fit-content;
@@ -180,7 +196,118 @@ main {
   font-weight: 900;
 }
 
-footer {
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(2, 5, 4, 0.8),
+      rgba(2, 7, 5, 0.8)
+    ), url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+}
+
+.skill-header {
+  text-decoration: underline;
+}
+
+.skills p {
+  padding: 0px 10px;
+}
+
+.hard-skills > span,
+.soft-skills > span {
+  font-size: xx-large;
+  font-weight: bold;
   border: 1px solid black;
-  height: 100vh;
+  border-radius: 5px;
+  background-color: #3f5ad1;
+}
+
+.hard-skills {
+  width: 45%;
+  /* margin-right: 200px; */
+  float: left;
+  height: 10%;
+  transition: 1s;
+}
+
+.hard-skills-grid,
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.skills > i {
+  color: #302323;
+}
+
+.soft-skills-grid div,
+.hard-skills-grid div {
+    box-sizing: border-box;
+  height: 270px;
+  width: fit-content;
+  margin: 10px;
+  font-size: x-large;
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.soft-skills-grid div p,
+.hard-skills-grid div p {
+  margin-top: 0px;
+}
+
+.hard-skills div {
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.hard-skills span,
+.soft-skills span {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.hard-skills:hover,
+.soft-skills:hover {
+  height: 100%;
+}
+
+.soft-skills {
+  width: 45%;
+  height: 10%;
+  float: right;
+  transition: 1s;
+}
+
+.soft-skills div {
+  transform: scale(0);
+  transition: 1s;
+}
+
+.soft-skills:hover div,
+.hard-skills:hover div {
+  transform: scale(1);
+}
+
+.hard-skills:hover {
+  margin-left: 5%;
+  width: 100%;
+}
+
+.soft-skills:hover {
+  margin-right: 5%;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: rgba(2, 5, 4, 0.8);
+  color: white;
 }
