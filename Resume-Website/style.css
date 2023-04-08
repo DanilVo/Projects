@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Chakra Petch";
-  src: url("/assets/fonts/ChakraPetch-Regular.ttf") format('truetype');
+  font-family: 'Chakra Petch';
+  src: url('/assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
 }
 
 @keyframes bg-animation {
   from {
-    background-position: bottom;
+    background-position: left;
     background-size: 3000px;
   }
   to {
@@ -14,10 +14,31 @@
   }
 }
 
+/* ABOUT ME SECTION RESPONSE BY SCREEN SIZE START */
+@media screen and (min-width: 768px) {
+  .about-me {
+    margin: 0px 80px 50px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me {
+    margin: 0px 60px 50px;
+    font-size: 16px;
+  }
+}
+/* ABOUT ME SECTION RESPONSE BY SCREEN SIZE END */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Chakra Petch";
+  font-family: 'Chakra Petch';
 }
 
 .container {
@@ -33,58 +54,130 @@ header {
   position: relative;
   background-image: linear-gradient(
       to right bottom,
-      rgba(2, 5, 4, 0.5),
-      rgba(2, 7, 5, 0.5)
+      rgba(2, 5, 4, 0.6),
+      rgba(2, 7, 5, 0.6)
     ),
-    url("/assets/images/matrix.jpg");
+    url('/assets/images/13082021-RETRO-4K.png');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bg-animation 60s infinite linear;
-  animation-iteration-count: infinite;
+  animation: bg-animation 80s infinite linear;
+  animation-direction: alternate;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
-span {
+header span {
   z-index: 2;
   color: white;
   position: absolute;
   display: flex;
-  top: 25%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 64px;
   font-weight: bold;
   text-align: center;
+  text-shadow: 0 0 5px black;
 }
 
-img[alt="Danil"] {
+img[alt='Danil'] {
   z-index: 2;
   position: absolute;
   height: 30%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 15px;
 }
-
+/* CONTACT ME LINKS START*/
 nav {
   z-index: 1;
   position: fixed;
-  width: 10%;
   top: 25%;
   left: 0;
-  background-color: white;
-  border: 1px solid black;
+  background-color: rgba(2, 5, 4, 0.5);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 ul {
   list-style-type: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
+.show-up {
+  position: absolute;
+  left: -90px;
+  transition: left 0.5s;
+  clip-path: polygon(
+    15% 20%,
+    100% 20%,
+    100% 80%,
+    15% 80%,
+    15% 65%,
+    0 50%,
+    15% 35%
+  );
+  color: white;
+}
+
+a:hover > .show-up {
+  left: 60px;
+  text-align: center;
+}
+
+.linkedin {
+  background-color: #3350e0;
+  width: 70px;
+  padding-left: 10px;
+}
+
+.github {
+  background-color: #9c7a5b;
+  width: 60px;
+  padding-left: 8px;
+}
+
+.email {
+  background-color: #fc5a5a;
+  width: 50px;
+  padding-left: 7px;
+}
+
+a {
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+li:nth-of-type(1):hover {
+  background-color: #3350e0;
+  border-top-right-radius: 5px;
+}
+
+li:nth-of-type(2):hover {
+  background-color: #9c7a5b;
+}
+
+li:nth-of-type(3):hover {
+  background-color: #fc5a5a;
+  border-bottom-right-radius: 5px;
+}
+/* CONTACT ME LINKS END*/
+
 main {
-  border: 1px solid black;
-  height: 50vh;
+  height: fit-content;
+}
+
+.head-about-me {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 56px;
+  font-weight: 900;
 }
 
 footer {
