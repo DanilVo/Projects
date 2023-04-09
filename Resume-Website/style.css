@@ -201,13 +201,14 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 65vh;
+  height: 70vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.9)
-    ), url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
-    color: white;
+    ),
+    url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+  color: white;
 }
 
 .skill-header {
@@ -224,12 +225,12 @@ main {
   font-weight: bold;
   border-width: 8px;
   border-style: solid;
-  border-image: linear-gradient(to right bottom, #f000ff,#001eff)1;
-  background-image: linear-gradient(to right bottom, #001eff,#f000ff);
+  border-image: linear-gradient(to right bottom, #f000ff, #001eff) 1;
+  background-image: linear-gradient(to right bottom, #001eff, #f000ff);
 }
 
 .hard-skills {
-  width: 50%;
+  width: 25%;
   float: left;
   height: 10%;
   transition: 1s;
@@ -240,6 +241,8 @@ main {
 .soft-skills-grid {
   display: grid;
   grid-template-columns: auto auto;
+  position: absolute;
+  width: 80%;
 }
 
 .skills > i {
@@ -248,7 +251,7 @@ main {
 
 .soft-skills-grid div,
 .hard-skills-grid div {
-    box-sizing: border-box;
+  box-sizing: border-box;
   height: 270px;
   width: fit-content;
   margin: 10px;
@@ -280,7 +283,7 @@ main {
 }
 
 .soft-skills {
-  width: 50%;
+  width: 25%;
   height: 10%;
   float: right;
   transition: 1s;
@@ -295,6 +298,8 @@ main {
 .soft-skills:hover div,
 .hard-skills:hover div {
   transform: scale(1);
+  overflow-x: hidden;
+
 }
 
 .hard-skills:hover {
