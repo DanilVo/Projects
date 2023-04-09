@@ -201,12 +201,13 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 50vh;
+  height: 65vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(2, 5, 4, 0.8),
-      rgba(2, 7, 5, 0.8)
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
     ), url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+    color: white;
 }
 
 .skill-header {
@@ -221,17 +222,18 @@ main {
 .soft-skills > span {
   font-size: xx-large;
   font-weight: bold;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #3f5ad1;
+  border-width: 8px;
+  border-style: solid;
+  border-image: linear-gradient(to right bottom, #f000ff,#001eff)1;
+  background-image: linear-gradient(to right bottom, #001eff,#f000ff);
 }
 
 .hard-skills {
-  width: 45%;
-  /* margin-right: 200px; */
+  width: 50%;
   float: left;
   height: 10%;
   transition: 1s;
+  margin-top: 50px;
 }
 
 .hard-skills-grid,
@@ -252,7 +254,7 @@ main {
   margin: 10px;
   font-size: x-large;
   text-align: left;
-  border: 2px solid black;
+  border: 2px solid rgb(216, 189, 189);
   border-radius: 10px;
 }
 
@@ -278,10 +280,11 @@ main {
 }
 
 .soft-skills {
-  width: 45%;
+  width: 50%;
   height: 10%;
   float: right;
   transition: 1s;
+  margin-top: 50px;
 }
 
 .soft-skills div {
