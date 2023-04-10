@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Chakra Petch";
-  src: url("/assets/fonts/ChakraPetch-Regular.ttf") format("truetype");
+  font-family: 'Chakra Petch';
+  src: url('/assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
 }
 
 @keyframes bg-animation {
@@ -12,8 +12,8 @@
   }
 }
 
-/* ABOUT ME SECTION RESPONSE BY SCREEN SIZE START */
-@media screen and (min-width: 768px) {
+/*RESPONSIVENESS BY SCREEN SIZE START */
+@media screen and (min-width: 821px) {
   .bg-image {
     background-size: 3000px;
   }
@@ -26,19 +26,156 @@
     letter-spacing: 3px;
     line-height: 50px;
   }
+
+  /* SKILLS SECTION START */
+
+  .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 45vw;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+    color: white;
+  }
+
+  .skill-header {
+    text-decoration: underline;
+  }
+
+  .skills p {
+    padding: 0px 10px;
+  }
+
+  .hard-skills > span,
+  .soft-skills > span {
+    font-size: xx-large;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 0px 10px;
+  }
+
+  .hard-skills {
+    width: 25%;
+    float: left;
+    height: 10%;
+    transition: 1s;
+    margin-top: 50px;
+    padding-top: 2px;
+  }
+
+  .hard-skills-grid,
+  .soft-skills-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    width: 80%;
+  }
+
+  .skills > i {
+    color: #302323;
+  }
+
+  .soft-skills-grid div,
+  .hard-skills-grid div {
+    box-sizing: border-box;
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    font-size: 1.5vw;
+    text-align: left;
+    border: 2px solid rgb(216, 189, 189);
+    border-radius: 10px;
+  }
+
+  .soft-skills-grid div p,
+  .hard-skills-grid div p {
+    margin-top: 0px;
+  }
+
+  .hard-skills div,
+  .soft-skills div {
+    transform: scale(0);
+    transition: 0.5s;
+  }
+
+  .hard-skills span,
+  .soft-skills span {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .hard-skills:hover,
+  .soft-skills:hover {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .soft-skills {
+    width: 25%;
+    height: 10%;
+    float: right;
+    transition: 1s;
+    margin-top: 50px;
+    padding-top: 2px;
+    margin-left: 15px;
+  }
+
+  .soft-skills:hover div,
+  .hard-skills:hover div {
+    transform: scale(1);
+  }
+
+  .hard-skills:hover {
+    margin-left: 4%;
+    width: 100%;
+  }
+
+  .soft-skills:hover {
+    margin-right: 4%;
+    width: 100%;
+  }
+
+  /* SKILLS SECTION END */
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 821px) {
   .bg-image {
-    background-size: 1500px;
+    background-size: 2500px;
   }
 
   .about-me {
     margin: 0px 60px 50px;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .skills {
+    margin: 0px 60px;
+  }
+
+  .hard-skills > span,
+  .soft-skills > span {
+    font-size: xx-large;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .skills p {
+    margin-left: 20px;
+  }
+
+  .skill-header {
+    font-size: 19px;
+    font-weight: 700;
   }
 }
-/* ABOUT ME SECTION RESPONSE BY SCREEN SIZE END */
+/*RESPONSIVENESS BY SCREEN SIZE END */
 
 @keyframes skills-appears {
   from {
@@ -56,13 +193,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Chakra Petch";
+  font-family: 'Chakra Petch';
   background-color: #e8e5e2;
+  overflow-x: hidden;
 }
 
 header {
   height: 100vh;
 }
+
+/* HEADER START */
 
 .bg-image {
   z-index: 2;
@@ -72,7 +212,7 @@ header {
       rgba(2, 5, 4, 0.6),
       rgba(2, 7, 5, 0.6)
     ),
-    url("/assets/images/13082021-RETRO-4K.png");
+    url('/assets/images/13082021-RETRO-4K.png');
   height: 100vh;
   background-repeat: no-repeat;
   animation: bg-animation 80s infinite linear;
@@ -95,7 +235,7 @@ header span {
   text-shadow: 0 0 5px black;
 }
 
-img[alt="Danil"] {
+img[alt='Danil'] {
   filter: drop-shadow(0 0 0.35rem black);
   z-index: 2;
   position: absolute;
@@ -105,7 +245,12 @@ img[alt="Danil"] {
   transform: translate(-50%, -50%);
   border-radius: 15px;
 }
+
+/* HEADER END */
+
+
 /* CONTACT ME NAV LINKS START*/
+
 nav {
   z-index: 1;
   position: fixed;
@@ -196,121 +341,7 @@ main {
   font-weight: 900;
 }
 
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 70vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9)
-    ),
-    url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
-  color: white;
-}
-
-.skill-header {
-  text-decoration: underline;
-}
-
-.skills p {
-  padding: 0px 10px;
-}
-
-.hard-skills > span,
-.soft-skills > span {
-  font-size: xx-large;
-  font-weight: bold;
-  border-width: 8px;
-  border-style: solid;
-  border-image: linear-gradient(to right bottom, #f000ff, #001eff) 1;
-  background-image: linear-gradient(to right bottom, #001eff, #f000ff);
-}
-
-.hard-skills {
-  width: 25%;
-  float: left;
-  height: 10%;
-  transition: 1s;
-  margin-top: 50px;
-}
-
-.hard-skills-grid,
-.soft-skills-grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  position: absolute;
-  width: 80%;
-}
-
-.skills > i {
-  color: #302323;
-}
-
-.soft-skills-grid div,
-.hard-skills-grid div {
-  box-sizing: border-box;
-  height: 270px;
-  width: fit-content;
-  margin: 10px;
-  font-size: x-large;
-  text-align: left;
-  border: 2px solid rgb(216, 189, 189);
-  border-radius: 10px;
-}
-
-.soft-skills-grid div p,
-.hard-skills-grid div p {
-  margin-top: 0px;
-}
-
-.hard-skills div {
-  transform: scale(0);
-  transition: 0.5s;
-}
-
-.hard-skills span,
-.soft-skills span {
-  margin-left: 5px;
-  font-weight: bold;
-}
-
-.hard-skills:hover,
-.soft-skills:hover {
-  height: 100%;
-}
-
-.soft-skills {
-  width: 25%;
-  height: 10%;
-  float: right;
-  transition: 1s;
-  margin-top: 50px;
-}
-
-.soft-skills div {
-  transform: scale(0);
-  transition: 1s;
-}
-
-.soft-skills:hover div,
-.hard-skills:hover div {
-  transform: scale(1);
-  overflow-x: hidden;
-
-}
-
-.hard-skills:hover {
-  margin-left: 5%;
-  width: 100%;
-}
-
-.soft-skills:hover {
-  margin-right: 5%;
-  width: 100%;
-}
+/* FOOTER START */
 
 footer {
   display: flex;
@@ -319,3 +350,4 @@ footer {
   background-color: rgba(2, 5, 4, 0.8);
   color: white;
 }
+/* FOOTER END */
