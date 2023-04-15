@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/bcec4466e8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-bar">
+        <div class="navigation">
+          <img src="/assets/images/netflix-logo-png-2562.png" alt="netflix" />
+          <ul>
+            <li>Home</li>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>New & Popular</li>
+            <li>My List</li>
+            <li>Browse by Language</li>
+          </ul>
+        </div>
+        <div class="user">
+          <input id="input" type="text" placeholder="Titles,people,genres" /><a
+            onclick="showInput()"
+            ><i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i
+          ></a>
+          <a href="">Kids</a>
+          <a href=""
+            ><i
+              class="fa-regular fa-bell"
+              id="fa-bell"
+              style="color: #ffffff"
+            ></i
+          ></a>
+          <span
+          onmouseover="hoverShow()"
+          onmouseleave="noHoverShow()"
+          id="hovShow"
+            ><img src="/assets/images/ape-avatar.png" class="avatar" /><i
+              class="fa-solid fa-caret-down fa-xs"
+              id="fa-caret-down"
+              style="color: #fff"
+            ></i
+          ></span>
+          <div id="hover-div">THIS DIV WILL APPEAR ON HOVER</div>
+        </div>
+      </div>
+    </nav>
+    <main></main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>

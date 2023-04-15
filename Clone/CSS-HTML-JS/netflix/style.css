@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Bebas-Neue";
+    src: url(/assets/fonts/BebasNeue-Regular.ttf);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    /* background-color: #141414; */
+    font-family: "Bebas-Neue";
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background-image: linear-gradient(rgb(20, 20, 20, 0.5), transparent);
+    transition: 0.5s;
+}
+
+.nav {
+    display: flex;
+}
+
+nav.active {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(20, 20, 20);
+    
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    width: 100vw;
+}
+
+.navigation {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+ul {
+    display: inline-flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+ul li {
+    margin-right: 10px;
+}
+
+img[alt="netflix"] {
+    height: 40px;
+    margin-top: 2vh;
+}
+
+.user {
+    width: 15vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.user a {
+    text-decoration: none;
+    color: white;
+}
+
+.avatar {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.user span {
+    display: flex;
+    align-items: center;
+}
+
+.user span i {
+    margin-left: 10px;
+}
+
+input {
+    display: none;
+}
+
+#hover-div {
+    display: block;
+}
+
+main {
+    height: 150vh;
+}
