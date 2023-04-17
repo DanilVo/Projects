@@ -16,6 +16,8 @@ function showInput() {
     } else {
         inp.style.display = "none"
     }
+    // inp.style.display ? "block" : "none";
+
 }
 
 function hoverShow() {
@@ -23,7 +25,7 @@ function hoverShow() {
     if (hov.style.display === "none") {
         hov.style.display = "block"
     } else {
-        hov.style.display = "none"
+        hov.style.display = "block"
     }
 }
 
@@ -36,11 +38,9 @@ function noHoverShow() {
     }
 }
 
-// function rotate() {
-//     const rotate = document.getElementById("fa-caret-down")
-//     if (rotate.style.transform === "none") {
-//         rotate.style.transform = "rotate(180deg)"    
-//     } else {
-//         rotate.style.transform = "none"
-//     }
-// } to (USER SPAN)
+function rotate() {
+    const rotate = document.getElementById("fa-caret-down")
+    rotate.style.transform = rotate.style.transform === "none" ? "rotate(180deg)" : "none";
+  }
+  
+// to (USER SPAN)

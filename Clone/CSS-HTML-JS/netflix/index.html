@@ -16,7 +16,7 @@
       <div class="nav-bar">
         <div class="navigation">
           <img src="/assets/images/netflix-logo-png-2562.png" alt="netflix" />
-          <ul>
+          <ul class="top-nav-bar">
             <li>Home</li>
             <li>TV Shows</li>
             <li>Movies</li>
@@ -39,16 +39,82 @@
             ></i
           ></a>
           <span
-          onmouseover="hoverShow()"
-          onmouseleave="noHoverShow()"
-          id="hovShow"
-            ><img src="/assets/images/ape-avatar.png" class="avatar" /><i
+            onmouseover="hoverShow();rotate()"
+            onmouseleave="noHoverShow()"
+            id="hovShow"
+            ><img src="/assets/images/ape-avatar.png" class="avatar" />
+            <i
               class="fa-solid fa-caret-down fa-xs"
               id="fa-caret-down"
               style="color: #fff"
             ></i
           ></span>
-          <div id="hover-div">THIS DIV WILL APPEAR ON HOVER</div>
+          <div id="hover-div">
+            <ul class="head-users">
+              <li class="users">
+                <div class="drop-down-menu">
+                  <img src="/assets/images/leopard.png" /><span href=""
+                    >Veronica</span
+                  >
+                </div>
+              </li>
+              <li class="users">
+                <div class="drop-down-menu">
+                  <img src="/assets/images/fox.png" /><span href=""
+                    >Olya Dima</span
+                  >
+                </div>
+              </li>
+              <li class="users">
+                <div class="drop-down-menu">
+                  <img src="/assets/images/shark.png" /><span href=""
+                    >Mama</span
+                  >
+                </div>
+              </li>
+              <li class="users">
+                <div class="drop-down-menu">
+                  <img src="/assets/images/kids.png" /><span href="">Kids</span>
+                </div>
+              </li>
+            </ul>
+            <ul class="head-setting">
+              <li class="settings">
+                <div class="drop-down-menu">
+                  <i class="fa-solid fa-pen fa-lg" style="color: #ccc"></i
+                  ><span href="">Manage Profiles</span>
+                </div>
+              </li>
+              <li class="settings">
+                <div class="drop-down-menu">
+                  <i
+                    class="fa-solid fa-arrow-right-arrow-left fa-lg"
+                    style="color: #ccc"
+                  ></i
+                  ><span href="">Transfer Profile</span>
+                </div>
+              </li>
+              <li class="settings">
+                <div class="drop-down-menu">
+                  <i class="fa-regular fa-user fa-lg" style="color: #fff"></i
+                  ><span href="">Account</span>
+                </div>
+              </li>
+              <li class="settings">
+                <div class="drop-down-menu">
+                  <i
+                    class="fa-regular fa-circle-question fa-lg"
+                    style="color: #fff"
+                  ></i
+                  ><span href="">Help Center</span>
+                </div>
+              </li>
+            </ul>
+            <hr />
+            <div class="drop-down-menu">
+              <span class="sign-out">Sing out of Netflix</span>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
