@@ -39,8 +39,9 @@
             ></i
           ></a>
           <span
-            onmouseover="hoverShow();rotate()"
-            onmouseleave="noHoverShow()"
+          
+            onmouseenter="hoverShow();rotate()"
+            onmouseleave="hoverShow();noRotate()"
             id="hovShow"
             ><img src="/assets/images/ape-avatar.png" class="avatar" />
             <i
@@ -49,7 +50,7 @@
               style="color: #fff"
             ></i
           ></span>
-          <div id="hover-div">
+          <div id="hover-div" class="hidden">
             <ul class="head-users">
               <li class="users">
                 <div class="drop-down-menu">
@@ -118,7 +119,39 @@
         </div>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <div class="video-container">
+        <div id="video-btn">
+          <span class="switch-btn">
+            <button class="volume" onclick="muted()">
+              <i  class="fa-import fa-solid fa-volume-xmark fa-md" style="color: #ccc; display: none;"></i>
+              <i  class="fa-import fa-solid fa-volume-high fa-md" style="color: #ccc; "></i>
+            </button>
+            <button class="replay" onclick="replay()">
+              <i
+                class=" fa-import fa-solid fa-arrow-rotate-right fa-md"
+                style="color: #ccc"
+              ></i>
+            </button>
+          </span>
+          <div class="pegi">
+            <span>16 +</span>
+          </div>
+        </div>
+        <div id="image-trailer">
+          <img src="/assets/images/faf.png" alt="faf-banner" />
+        </div>
+        <video
+          controls
+          onended="endVid()"
+          id="trailer"
+          width="100%"
+          height="100%"
+        >
+          <source src="/assets/video/faf9-1.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </main>
     <footer></footer>
     <script src="index.js"></script>
   </body>

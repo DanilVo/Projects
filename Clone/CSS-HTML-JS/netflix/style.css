@@ -1,30 +1,31 @@
 @font-face {
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue";
   src: url(/assets/fonts/BebasNeue-Regular.ttf);
 }
 
 body {
   padding: 0px;
   margin: 0px;
-  /* background-color: #141414; */
-  font-family: 'Bebas-Neue';
+  background: #141414;
+  font-family: "Bebas-Neue";
 }
 
 nav {
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
   position: fixed;
-  background-image: linear-gradient(rgb(20, 20, 20, 0.5), transparent);
+  background-image: linear-gradient(rgb(20, 20, 20, 0.9), transparent);
   transition: 0.5s;
 }
 
 .nav {
   display: flex;
+  z-index: 10;
 }
 
 nav.active {
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
   position: fixed;
   background-color: rgb(20, 20, 20);
 }
@@ -53,7 +54,7 @@ nav.active {
   margin-right: 10px;
 }
 
-img[alt='netflix'] {
+img[alt="netflix"] {
   height: 40px;
   margin-top: 2vh;
 }
@@ -76,9 +77,9 @@ img[alt='netflix'] {
 }
 
 .fa-caret-down {
-    position: relative;
-    top: 15px;
-    height: 0px;
+  position: relative;
+  top: 15px;
+  height: 0px;
 }
 
 .user span {
@@ -90,11 +91,15 @@ img[alt='netflix'] {
 }
 
 input {
+  position: absolute;
+  right: 20vw;
   display: none;
 }
 
 #hover-div {
-  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
   position: absolute;
   top: 80px;
   height: fit-content;
@@ -105,44 +110,36 @@ input {
 #hover-div a {
   color: white;
 }
-
-#hover-div {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid white;
-  background: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-}
-
-.users, .settings {
+.users,
+.settings {
   display: flex;
   flex-direction: column;
   list-style-type: none;
 }
 
 #hover-div ul {
-    padding: 5px 10px;
-    margin: 0px;
+  padding: 5px 10px 0px 10px;
+  margin: 0px;
 }
 
 #hover-div ul span {
-    font-size: small;
-    font-weight: 100;
+  font-size: medium;
+  font-weight: 100;
 }
 
 .head-users img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 #hover-div .head-users span {
-    position: relative;
-    left: 15px;
-    bottom: 10px;
+  position: relative;
+  left: 15px;
+  bottom: 10px;
 }
 
 #hover-div .head-setting span {
-    position: relative;
-    left: 10px;
+  position: relative;
+  left: 10px;
 }
 
 .drop-down-menu img {
@@ -151,27 +148,107 @@ input {
 }
 
 .drop-down-menu i {
-    padding-left: 5px;
-    height: 32px;
-    width: 32px;
-    text-align: start;
-  }
+  padding-left: 5px;
+  height: 32px;
+  width: 32px;
+  text-align: start;
+}
 
-.drop-down-menu span{
+.drop-down-menu span {
   display: inline-flex;
   position: relative;
   left: 50px;
 }
 
 .sign-out {
-    line-height: 40px;
+  line-height: 40px;
 }
 
 main {
   height: 150vh;
+  position: relative;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-container #video-btn {
+  display: flex;
+  color: white;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  flex-direction: row;
+  font-size: 2vw;
+}
+
+#video-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.volume, .replay {
+  all: unset;
+}
+
+.switch-btn {
+  /* display: flex; */
+  align-items: center;
+  padding-right: 1vw;
+}
+
+.fa-import {
+  padding: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* .fa-volume-xmark {
+  display: none;
+} */
+
+.fa-volume-high {
+  display: block;
+}
+
+.replay {
+  display: none;
+}
+
+.pegi {
+  border-left: 1px solid #fff;
+  background: rgb(20, 20, 20, 0.4);
+  width: 8vw;
+  height: fit-content;
+}
+
+#image-trailer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: 0.5s;
+}
+
+#image-trailer > img {
+  width: 100%;
+  height: 100%;
 }
 
 hr {
   border-top: 1px solid #ccc;
-  margin: 4px 0px;
+  margin: 0px;
 }
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+
