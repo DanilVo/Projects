@@ -12,13 +12,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.accesibility {
-  position: absolute;
-  right: 5px;
-}
-
-.accesibility button {
-  background-color: blue;
+.accessibility {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  right: 0px;
+  top: 15%;
+  border-top-left-radius: 25%;
+  border-bottom-left-radius: 25%;
 }
 
 .container {
@@ -38,6 +39,7 @@ body {
   align-items: center;
   font-weight: 300;
   font-size: 16px;
+  padding: 5px 0;
 }
 
 .headers select {
@@ -82,6 +84,13 @@ body {
 .blue-button {
   background-color: rgb(112, 102, 228);
   border: none;
+  transition: 0.5s;
+}
+
+.blue-button:hover {
+  background-color: rgb(80, 70, 190);
+  border: none;
+  cursor: pointer;
 }
 
 .start-button {
@@ -111,7 +120,6 @@ body {
 }
 
 .first-window {
-  /* margin-top: 51px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -150,5 +158,10 @@ body {
   text-align: center;
   color: #626f96;
   font-weight: 300;
+}
+
+.fa-brands {
+  margin-right: 20px;
+  letter-spacing: 2px;
 }
 

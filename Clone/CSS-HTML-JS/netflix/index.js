@@ -55,6 +55,7 @@ function rotate() {
 }
 
 var vid = document.querySelector("#trailer");
+document.querySelector(".short-description").style.display = "none"
 vid.muted = true;
 vid.autoplay = true;
 vid.load();
@@ -69,6 +70,7 @@ function endVid() {
   vid.style.display = "none";
   document.getElementById("image-trailer").style.display = "block";
   document.querySelector(".replay").style.display = "block";
+  document.querySelector(".short-description").style.display = "block"
 }
 
 function replay() {
@@ -82,6 +84,7 @@ function replay() {
   document.querySelector(".fa-volume-high").style.display = "block";
   document.querySelector(".fa-volume-xmark").style.display = "none";
   document.querySelector(".volume").style.display = "block";
+  document.querySelector(".short-description").style.display = "none"
   console.log("replay");
 }
 

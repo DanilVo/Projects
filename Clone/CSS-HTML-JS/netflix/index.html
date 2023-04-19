@@ -39,7 +39,6 @@
             ></i
           ></a>
           <span
-          
             onmouseenter="hoverShow();rotate()"
             onmouseleave="hoverShow();noRotate()"
             id="hovShow"
@@ -121,15 +120,44 @@
     </nav>
     <main>
       <div class="video-container">
+        <div id="about-movie">
+          <div class="name-description">
+            <img
+              src="/assets/images/transparent-faf9-banner.png"
+              alt="faf-banner"
+            />
+            <span class="short-description"
+              >Join Dom and his crew on an epic journey of high-stakes heists,
+              adrenaline-fueled races, and non-stop action in the explosive Fast
+              and Furious saga.</span
+            >
+          </div>
+          <div class="btn-movie">
+            <button class="btn play">
+              <i class="fa-solid fa-play fa-xl" style="color: #000000"></i>
+              <span> Play</span>
+            </button>
+            <button class="btn info">
+              <i class="fa-solid fa-circle-info fa-xl" style="color: #ffffff"></i>
+              <span> More Info</span>
+            </button>
+          </div>
+        </div>
         <div id="video-btn">
           <span class="switch-btn">
             <button class="volume" onclick="muted()">
-              <i  class="fa-import fa-solid fa-volume-xmark fa-md" style="color: #ccc; display: none;"></i>
-              <i  class="fa-import fa-solid fa-volume-high fa-md" style="color: #ccc; "></i>
+              <i
+                class="fa-import fa-solid fa-volume-xmark fa-md"
+                style="color: #ccc; display: none"
+              ></i>
+              <i
+                class="fa-import fa-solid fa-volume-high fa-md"
+                style="color: #ccc"
+              ></i>
             </button>
             <button class="replay" onclick="replay()">
               <i
-                class=" fa-import fa-solid fa-arrow-rotate-right fa-md"
+                class="fa-import fa-solid fa-arrow-rotate-right fa-md"
                 style="color: #ccc"
               ></i>
             </button>
@@ -148,7 +176,7 @@
           width="100%"
           height="100%"
         >
-          <source src="/assets/video/faf9-1.mp4" type="video/mp4" />
+          <source src="/assets/video/faf9-trailer.mp4" type="video/mp4" />
         </video>
       </div>
     </main>
