@@ -21,20 +21,11 @@ function showInput() {
 function hoverShow() {
   const hov = document.querySelector("#hover-div");
   if (hov.classList.contains("hidden")) {
-    
-      hov.classList.remove("hidden");
+    hov.classList.remove("hidden");
     hov.classList.add("shown");
   } else {
-    
-     hov.classList.remove("shown");
+    hov.classList.remove("shown");
     hov.classList.add("hidden");
-  }
-}
-
-function noHoverShow() {
-  const hov = document.getElementById("hover-div");
-  if (hov.style.display === "block") {
-    hov.style.display = "none";
   }
 }
 
@@ -55,7 +46,7 @@ function rotate() {
 }
 
 var vid = document.querySelector("#trailer");
-document.querySelector(".short-description").style.display = "none"
+document.querySelector(".short-description").style.display = "none";
 vid.muted = true;
 vid.autoplay = true;
 vid.load();
@@ -70,7 +61,7 @@ function endVid() {
   vid.style.display = "none";
   document.getElementById("image-trailer").style.display = "block";
   document.querySelector(".replay").style.display = "block";
-  document.querySelector(".short-description").style.display = "block"
+  document.querySelector(".short-description").style.display = "block";
 }
 
 function replay() {
@@ -84,7 +75,7 @@ function replay() {
   document.querySelector(".fa-volume-high").style.display = "block";
   document.querySelector(".fa-volume-xmark").style.display = "none";
   document.querySelector(".volume").style.display = "block";
-  document.querySelector(".short-description").style.display = "none"
+  document.querySelector(".short-description").style.display = "none";
   console.log("replay");
 }
 
@@ -97,4 +88,21 @@ function muted() {
   document.querySelector(".fa-volume-high").style.display = vid.muted
     ? "block"
     : "none";
+}
+
+const firstList = document.querySelector("#first-list");
+const secondList = document.querySelector("#second-list");
+
+function nextList() {
+  secondList.classList.remove("hidden");
+  secondList.classList.add("shown");
+  firstList.classList.remove("shown");
+  firstList.classList.add("hidden");
+}
+
+function previousList() {
+  secondList.classList.remove("shown");
+  secondList.classList.add("hidden");
+  firstList.classList.remove("hidden");
+  firstList.classList.add("shown");
 }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue";
   src: url(/assets/fonts/BebasNeue-Regular.ttf);
 }
 
@@ -7,7 +7,7 @@ body {
   padding: 0px;
   margin: 0px;
   background: #141414;
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue";
 }
 
 nav {
@@ -20,12 +20,12 @@ nav {
 
 .nav {
   display: flex;
-  z-index: 10;
+  z-index: 11;
 }
 
 nav.active {
   width: 100vw;
-  height: 8vh;
+  height: 8vw;
   position: fixed;
   background-color: rgb(20, 20, 20);
 }
@@ -48,15 +48,18 @@ nav.active {
   display: inline-flex;
   list-style-type: none;
   align-items: center;
+  letter-spacing: 1px;
+  width: 50vw;
+  font-size: 1.5vw;
 }
 
 .top-nav-bar li {
   margin-right: 10px;
 }
 
-img[alt='netflix'] {
-  height: 40px;
-  margin-top: 2vh;
+img[alt="netflix"] {
+  height: 3vw;
+  margin-top: 1.5vw;
 }
 
 .user {
@@ -110,6 +113,7 @@ input {
 #hover-div a {
   color: white;
 }
+
 .users,
 .settings {
   display: flex;
@@ -196,7 +200,6 @@ main {
 }
 
 .switch-btn {
-  /* display: flex; */
   align-items: center;
   padding-right: 1vw;
 }
@@ -255,8 +258,10 @@ hr {
 #about-movie {
   position: absolute;
   display: block;
-  top: 30%;
+  top: 25%;
   margin-left: 5%;
+  z-index: 10;
+  width: 50vw;
 }
 
 .name-description img {
@@ -267,7 +272,7 @@ hr {
 .name-description span {
   display: block;
   width: 40vw;
-  font-size: 2.5vh;
+  font-size: 2vw;
   color: black;
 }
 
@@ -280,9 +285,9 @@ hr {
 }
 
 .btn {
-  font-weight:600;
-  width: 9vw;  
-  padding: 2vh;
+  font-weight: 600;
+  width: 9vw;
+  padding: 1.2vw;
   font-size: 1.2vw;
   box-sizing: content-box;
   border: none;
@@ -290,13 +295,13 @@ hr {
   z-index: 10;
 }
 
-
 .play:hover {
-  background-color: rgba(109, 109, 110, 0.5);
-  
+  background-color: rgba(109, 109, 110, 0.6);
+  cursor: pointer;
 }
 
 .info {
+  cursor: pointer;
   margin-left: 1vw;
   background-color: rgba(109, 109, 110, 0.7);
   color: #fff;
@@ -304,4 +309,56 @@ hr {
 
 .info:hover {
   background-color: rgba(109, 109, 110, 0.3);
+}
+
+#shows {
+}
+
+.scroll-page-btns {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 4vw;
+}
+
+#first-list {
+  overflow: visible;
+}
+
+.movies-list-1 > img {
+  width: 18vw;
+}
+
+.movies-list-2 > img {
+  width: 18vw;
+}
+
+.movies-list-1 {
+  position: relative;
+  transition: 1s;
+}
+
+.movies-list-2 {
+  position: relative;
+}
+
+.scroll-btn {
+  height: 10.5vw;
+  width: 2.5vw;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(209, 146, 146, 0.1);
+  margin: 0px 3px;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.scroll-btn:hover {
+  /* height: 10.5vh;
+  width: 2.5vw; ---------------------------------------- this was a mistake that made object jump, it inherit from a previous state and add new values*/
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0px 3px;
 }

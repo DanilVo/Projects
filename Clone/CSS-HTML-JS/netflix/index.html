@@ -10,6 +10,11 @@
       src="https://kit.fontawesome.com/bcec4466e8.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/netflix.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -138,7 +143,10 @@
               <span> Play</span>
             </button>
             <button class="btn info">
-              <i class="fa-solid fa-circle-info fa-xl" style="color: #ffffff"></i>
+              <i
+                class="fa-solid fa-circle-info fa-xl"
+                style="color: #ffffff"
+              ></i>
               <span> More Info</span>
             </button>
           </div>
@@ -170,7 +178,6 @@
           <img src="/assets/images/faf.png" alt="faf-banner" />
         </div>
         <video
-          controls
           onended="endVid()"
           id="trailer"
           width="100%"
@@ -179,8 +186,43 @@
           <source src="/assets/video/faf9-trailer.mp4" type="video/mp4" />
         </video>
       </div>
+      <div id="shows">
+        <div class="scroll-page-btns">
+          <button class="scroll-btn previous-list" onclick="previousList()"> 
+            <span id="arrow-left"
+            ><i
+            class="fa-solid fa-chevron-left fa-xl"
+            style="color: white"
+            ></i
+            ></span>
+          </button>
+          <div id="first-list" class="movies-list-1 shown">
+            <img src="/assets/images/bb.png" />
+            <img src="/assets/images/blcm.png" />
+            <img src="/assets/images/bm.png" />
+            <img src="/assets/images/f.png" />
+            <img src="/assets/images/ij.png" />
+          </div>
+          <div id="second-list" class="movies-list-2 hidden">
+            <img src="/assets/images/kr.png" />
+            <img src="/assets/images/ob.png" />
+            <img src="/assets/images/pb.png" />
+            <img src="/assets/images/rnm.png" />
+            <img src="/assets/images/se.png" />
+          </div>
+          <button class="scroll-btn next-list" onclick="nextList()">
+            <span id="arrow-right"
+              ><i
+                class="fa-solid fa-chevron-right fa-xl"
+                style="color: white"
+              ></i
+            ></span>
+          </button>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <script src="index.js"></script>
+    <noscript>Your browser does not support JavaScript!</noscript>
   </body>
 </html>
