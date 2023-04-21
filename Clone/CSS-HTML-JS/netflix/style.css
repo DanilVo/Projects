@@ -16,16 +16,14 @@ nav {
   position: fixed;
   background-image: linear-gradient(rgb(20, 20, 20, 0.9), transparent);
   transition: 0.5s;
-}
-
-.nav {
   display: flex;
   z-index: 11;
+  height: fit-content;
 }
 
 nav.active {
   width: 100vw;
-  height: 8vw;
+  height: fit-content;
   position: fixed;
   background-color: rgb(20, 20, 20);
 }
@@ -59,7 +57,7 @@ nav.active {
 
 img[alt="netflix"] {
   height: 3vw;
-  margin-top: 1.5vw;
+  margin-top: 1.5%;
 }
 
 .user {
@@ -311,8 +309,6 @@ hr {
   background-color: rgba(109, 109, 110, 0.3);
 }
 
-#shows {
-}
 
 .scroll-page-btns {
   white-space: nowrap;
