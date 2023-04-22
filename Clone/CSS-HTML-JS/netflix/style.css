@@ -313,7 +313,7 @@ hr {
 .scroll-page-btns {
   white-space: nowrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   bottom: 4vw;
 }
@@ -322,25 +322,18 @@ hr {
   overflow: visible;
 }
 
-.movies-list-1 > img {
-  width: 18vw;
-}
-
+.movies-list-1 > img,
 .movies-list-2 > img {
   width: 18vw;
 }
 
-.movies-list-1 {
-  position: relative;
-  transition: 1s;
-}
-
+.movies-list-1,
 .movies-list-2 {
   position: relative;
 }
 
 .scroll-btn {
-  height: 10.5vw;
+  height: 10.3vw;
   width: 2.5vw;
   border-radius: 5px;
   border: none;
@@ -357,4 +350,13 @@ hr {
   border: none;
   background-color: rgba(0, 0, 0, 0.4);
   margin: 0px 3px;
+}
+
+
+h2 {
+  color: white;
+  position: absolute;
+  bottom: 9vw;
+  left: 2vw;
+  font-weight: 100;
 }
