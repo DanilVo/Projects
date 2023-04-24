@@ -33,7 +33,7 @@
         <div class="user">
           <input id="input" type="text" placeholder="Titles,people,genres" /><a
             onclick="showInput()"
-            ><i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i
+            ><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i
           ></a>
           <a href="">Kids</a>
           <a href=""
@@ -177,34 +177,29 @@
         <div id="image-trailer">
           <img src="/assets/images/faf.png" alt="faf-banner" />
         </div>
-        <video
-          onended="endVid()"
-          id="trailer"
-          width="100%"
-          height="100%"
-        >
+        <video onended="endVid()" id="trailer" width="100%" height="100%">
           <source src="/assets/video/faf9-trailer.mp4" type="video/mp4" />
         </video>
       </div>
       <div id="shows">
-        <div class="scroll-page-btns">
-          <button class="scroll-btn previous-list" onclick="previousList()"> 
+        <div class="scroll-page-shows">
+          <button class="scroll-btn previous-list" onclick="previousList()">
             <span id="arrow-left"
-            ><i
-            class="fa-solid fa-chevron-left fa-xl"
-            style="color: white"
-            ></i
+              ><i
+                class="fa-solid fa-chevron-left fa-md"
+                style="color: white"
+              ></i
             ></span>
           </button>
           <h2>TV Shows</h2>
-          <div id="first-list" class="movies-list-1 shown">
+          <div id="first-list" class="movies-list-1">
             <img src="/assets/images/bb.png" />
             <img src="/assets/images/blcm.png" />
             <img src="/assets/images/bm.png" />
             <img src="/assets/images/f.png" />
             <img src="/assets/images/ij.png" />
           </div>
-          <div id="second-list" class="movies-list-2 hidden">
+          <div id="second-list" class="movies-list-2">
             <img src="/assets/images/kr.png" />
             <img src="/assets/images/ob.png" />
             <img src="/assets/images/pb.png" />
@@ -214,7 +209,7 @@
           <button class="scroll-btn next-list" onclick="nextList()">
             <span id="arrow-right"
               ><i
-                class="fa-solid fa-chevron-right fa-xl"
+                class="fa-solid fa-chevron-right fa-md "
                 style="color: white"
               ></i
             ></span>

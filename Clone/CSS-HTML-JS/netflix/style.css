@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Bebas-Neue";
+  font-family: 'Bebas-Neue';
   src: url(/assets/fonts/BebasNeue-Regular.ttf);
 }
 
@@ -7,7 +7,8 @@ body {
   padding: 0px;
   margin: 0px;
   background: #141414;
-  font-family: "Bebas-Neue";
+  font-family: 'Bebas-Neue';
+  overflow-x: hidden;
 }
 
 nav {
@@ -47,15 +48,15 @@ nav.active {
   list-style-type: none;
   align-items: center;
   letter-spacing: 1px;
-  width: 50vw;
   font-size: 1.5vw;
+  padding-left: 2vw;
 }
 
 .top-nav-bar li {
   margin-right: 10px;
 }
 
-img[alt="netflix"] {
+img[alt='netflix'] {
   height: 3vw;
   margin-top: 1.5%;
 }
@@ -95,6 +96,9 @@ input {
   position: absolute;
   right: 20vw;
   display: none;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 }
 
 #hover-div {
@@ -309,49 +313,68 @@ hr {
   background-color: rgba(109, 109, 110, 0.3);
 }
 
-
-.scroll-page-btns {
+#shows {
   white-space: nowrap;
-  display: flex;
-  justify-content: space-around;
   position: relative;
   bottom: 4vw;
 }
 
-#first-list {
-  overflow: visible;
+.scroll-page-shows {
+  display: flex;
+  align-items: start;
 }
 
 .movies-list-1 > img,
 .movies-list-2 > img {
   width: 18vw;
+  margin-left: 0.4vw;
 }
 
-.movies-list-1,
+.movies-list-1 {
+  position: relative;
+  transform: translateX(3vw);
+  transition: 0.8s;
+}
+
+.movies-list-1.active {
+  transform: translateX(-90vw);
+}
+
 .movies-list-2 {
   position: relative;
+  transform: translateX(3.2vw);
+  transition: 0.8s;
+}
+
+.movies-list-2.active {
+  transform: translateX(-89.5vw);
 }
 
 .scroll-btn {
+  position: absolute;
   height: 10.3vw;
-  width: 2.5vw;
+  width: 2.7vw;
   border-radius: 5px;
   border: none;
-  background-color: rgba(209, 146, 146, 0.1);
-  margin: 0px 3px;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+.previous-list {
+  left: 0;
+}
+
+.next-list {
+  right: 0;
 }
 
 .scroll-btn:hover {
-  /* height: 10.5vh;
-  width: 2.5vw; ---------------------------------------- this was a mistake that made object jump, it inherit from a previous state and add new values*/
   border-radius: 5px;
   border: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  margin: 0px 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: x-large;
 }
-
 
 h2 {
   color: white;
