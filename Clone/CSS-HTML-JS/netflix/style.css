@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue";
   src: url(/assets/fonts/BebasNeue-Regular.ttf);
 }
 
@@ -7,7 +7,7 @@ body {
   padding: 0px;
   margin: 0px;
   background: #141414;
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue";
   overflow-x: hidden;
 }
 
@@ -56,7 +56,7 @@ nav.active {
   margin-right: 10px;
 }
 
-img[alt='netflix'] {
+img[alt="netflix"] {
   height: 3vw;
   margin-top: 1.5%;
 }
@@ -94,11 +94,12 @@ img[alt='netflix'] {
 
 input {
   position: absolute;
-  right: 20vw;
+  right: 19vw;
   display: none;
   border: 1px solid white;
   background-color: black;
   color: white;
+  height: 50%;
 }
 
 #hover-div {
@@ -179,6 +180,15 @@ main {
   position: relative;
 }
 
+.vignette-layer {
+  position: absolute;
+  width: 100vw;
+  height: 10vw;
+  top: 80%;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+  z-index: 1;
+}
+
 .video-container #video-btn {
   display: flex;
   color: white;
@@ -237,12 +247,15 @@ main {
   height: 100%;
   display: none;
   transition: 0.5s;
+  
 }
 
 #image-trailer > img {
   width: 100%;
   height: 100%;
 }
+
+
 
 hr {
   border-top: 1px solid #ccc;
@@ -317,6 +330,7 @@ hr {
   white-space: nowrap;
   position: relative;
   bottom: 4vw;
+  z-index: 2;
 }
 
 .scroll-page-shows {
@@ -354,7 +368,6 @@ hr {
   position: absolute;
   height: 10.3vw;
   width: 2.7vw;
-  border-radius: 5px;
   border: none;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -370,7 +383,6 @@ hr {
 }
 
 .scroll-btn:hover {
-  border-radius: 5px;
   border: none;
   background-color: rgba(0, 0, 0, 0.6);
   font-size: x-large;
