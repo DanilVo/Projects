@@ -4,6 +4,13 @@ window.onscroll = function () {
   top >= 30 ? nav.classList.add('active') : nav.classList.remove('active');
 };
 
+const main = document.querySelector('main');
+main.addEventListener('click', () =>
+  inp.style.display == 'block'
+    ? (inp.style.display = 'none')
+    : (inp.style.display = 'none')
+);
+
 const inp = document.querySelector('input');
 function showInput() {
   inp.style.display == ''
@@ -13,16 +20,23 @@ function showInput() {
     : (inp.style.display = 'block');
 }
 
+const span = document.querySelector('#hovShow');
+const hov = document.querySelector('#hover-div');
 function hoverShow() {
-  const hov = document.querySelector('#hover-div');
   if (hov.classList.contains('hidden')) {
     hov.classList.remove('hidden');
-    hov.classList.add('shown');
+    hov.addEventListener('mouseenter', () => hov.classList.add('shown'));
   } else {
-    hov.classList.remove('shown');
-    hov.classList.add('hidden');
+    hov.addEventListener('mouseleave', () => {
+      hov.classList.remove('shown');
+      hov.classList.add('hidden');
+    });
   }
 }
+
+span.addEventListener('mouseleave', () =>
+  setTimeout(() => hov.classList.add('hidden'), 1000)
+);
 
 function noRotate() {
   const rotate = document.getElementById('fa-caret-down');
