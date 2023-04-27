@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: darkkhaki;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.btn {
+    height: 5vw;
+    width: 10vw;
+    margin-left: 1vw;
+    border-radius: 5px;
+    border: none;
+    background-color: lightcyan;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: rgb(130, 218, 218);
+}
+
+.todo-input {
+    text-align: center;
+}
+.user-input {
+    height: 3vw;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+}
+
+li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    height: 5vw;
+    margin-top: 1vh;
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+}
