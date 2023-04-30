@@ -1,59 +1,115 @@
+:root {
+  --light: #fdf7c3;
+  --darkerLight: #ffdeb4;
+  --dark: #ffb4b4;
+  --darkest: #b2a4ff;
+}
+
 @font-face {
-    font-family: 'Rubik';
-    src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
+  font-family: 'Rubik';
+  src: url(/assets/fonts/Rubik-VariableFont_wght.ttf);
 }
 
 html {
-    padding: 0;
-    margin: 0;
-    font-family: 'Rubik';
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik';
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background-color: darkkhaki;
+  padding: 0;
+  margin: 0;
+  background-color: var(--light);
 }
 
 h1 {
-    text-align: center;
-    text-decoration: underline;
+  text-align: center;
+  color: var(--darkest);
+  text-shadow: 4px 4px 8px var(--dark);
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .btn {
+  height: 5vw;
+  width: 10vw;
+  margin-left: 1vw;
+  border-radius: 5px;
+  border: none;
+  font-size: 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--dark);
+}
+
+.todo-input {
+  background-color: var(--darkerLight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.user-input {
+  height: 3vw;
+  background-color: var(--darkerLight);
+  border: none;
+  border-radius: 5px;
+}
+
+li {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 55vw;
+  height: 5vw;
+  margin-top: 1vh;
+  border: 2px solid var(--darkerLight);
+  border-radius: 5px;
+}
+
+.checked {
+    opacity: 0.8;
+}
+
+.todos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+li > input,
+li > button {
+  font-size: 2vw;
+  transition: 0.2s;
+}
+
+li > button:hover {
     height: 5vw;
     width: 10vw;
     margin-left: 1vw;
     border-radius: 5px;
     border: none;
-    background-color: lightcyan;
     font-size: 2vw;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn:hover {
-    background-color: rgb(130, 218, 218);
-}
-
-.todo-input {
-    text-align: center;
-}
-.user-input {
-    height: 3vw;
-    background-color: lightblue;
-    border: none;
-    border-radius: 5px;
-}
-
-li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50vw;
-    height: 5vw;
-    margin-top: 1vh;
-    border: 2px solid lightgreen;
-    border-radius: 5px;
+    background-color: var(--darkerLight);
 }
