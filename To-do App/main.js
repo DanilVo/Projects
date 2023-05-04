@@ -1,133 +1,110 @@
-window.addEventListener('load', showArrayFromLS)
+const userInput = document.querySelector('.user-input');
+const mainList = document.querySelector('ul');
 
-function showArrayFromLS() {
-      let arr = JSON.parse(localStorage.getItem("to-Dos"));
-      arr.forEach((todo) => {
-          mainList.appendChild(newListItem);
-          checkBox.checked = todo.completed;
-          newListItem.appendChild(checkBox);
-          newListItem.appendChild(todo.value)
-          console.log(todo)
-      })
+const finishedToDos = document.querySelector('#finishedToDos');
+let countFinishedToDos = 0;
+finishedToDos.innerText = countFinishedToDos;
+
+const allToDos = document.querySelector('#allToDos');
+let countAllToDos = 0;
+allToDos.innerText = countAllToDos;
+
+userInput.addEventListener('keypress', function (event) {
+  if (event.key === 'Enter') {
+    addTodo();
   }
+});
 
-//   let arr = JSON.parse(localStorage.getItem("to-Dos"));
-//   console.log(arr[0]);
+function addTodo() {
+  const newListItem = document.createElement('li');
+  const newInput = document.createElement('input');
+  const checkBox = document.createElement('input');
+  checkBox.type = 'checkbox';
 
-  // array.forEach((todo) => {
-  //   mainList.appendChild(newListItem);
-  //   newListItem.appendChild(checkBox);
-  //   checkBox.checked = todo.checkBox;
-  //   newInput.value = todo.value;
-  //   console.log(`${todo.value} completed:${todo.checkbox}`);
-  // });
+  const inputValue = userInput.value;
 
-//   console.log(JSON.parse(localStorage.getItem("to-Dos"))[0]);
+  userInput.value = '';
 
-  const userInput = document.querySelector(".user-input");
-  const mainList = document.querySelector("ul");
-
-  const finishedToDos = document.querySelector("#finishedToDos");
-  let countFinishedToDos = 0;
-  finishedToDos.innerText = countFinishedToDos;
-
-  const allToDos = document.querySelector("#allToDos");
-  let countAllToDos = 0;
-  allToDos.innerText = countAllToDos;
-
-  userInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      addTodo();
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  const removeToDo = () => {
+    if (newListItem.classList.contains('checked')) {
+      newListItem.classList.remove('checked');
+      countFinishedToDos -= 1;
+      printFinishedToDos();
     }
-  });
+    mainList.removeChild(newListItem);
+    countAllToDos -= 1;
+    printNumber();
+  };
+  deleteButton.addEventListener('click', removeToDo);
 
-  function addTodo() {
-    const newListItem = document.createElement("li");
-    const newInput = document.createElement("input");
-    const checkBox = document.createElement("input");
-    checkBox.type = "checkbox";
+  userInput.focus();
 
-    const inputValue = userInput.value;
+  newInput.setAttribute('readonly', 'readonly');
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
 
-    userInput.value = "";
-
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    const removeToDo = () => {
-      if (newListItem.classList.contains("checked")) {
-        newListItem.classList.remove("checked");
-        countFinishedToDos -= 1;
-        printFinishedToDos();
-      }
-      mainList.removeChild(newListItem);
-      countAllToDos -= 1;
-      printNumber();
-    };
-    deleteButton.addEventListener("click", removeToDo);
-
-    userInput.focus();
-
-    newInput.setAttribute("readonly", "readonly");
-    const editButton = document.createElement("button");
-    editButton.textContent = "Edit";
-
-    function editTodo() {
-      if (editButton.textContent == "Edit") {
-        newInput.removeAttribute("readonly", "readonly");
-        editButton.textContent = "Save";
-        newInput.focus();
-      } else {
-        newInput.setAttribute("readonly", "readonly");
-        editButton.textContent = "Edit";
-      }
-    }
-    editButton.addEventListener("click", editTodo);
-
-    checkBox.addEventListener("click", isFinishedTodo);
-
-    function isFinishedTodo() {
-      if (checkBox.checked) {
-        newListItem.classList.add("checked");
-        countFinishedToDos += 1;
-        printFinishedToDos();
-      } else {
-        newListItem.classList.remove("checked");
-        countFinishedToDos -= 1;
-        printFinishedToDos();
-      }
-    }
-
-    if (inputValue.length) {
-      mainList.appendChild(newListItem);
-      newListItem.appendChild(checkBox);
-      newInput.value = inputValue;
-      newListItem.appendChild(newInput);
-      newListItem.appendChild(deleteButton);
-      newListItem.appendChild(editButton);
-
-      countAllToDos += 1;
-      printNumber();
-      let toDosFromLS = getArrayFromLS() || [];
-      setArrayToLS([
-        ...toDosFromLS,
-        { value: newInput.value, completed: false },
-      ]);
+  function editTodo() {
+    if (editButton.textContent == 'Edit') {
+      newInput.removeAttribute('readonly', 'readonly');
+      editButton.textContent = 'Save';
+      newInput.focus();
     } else {
-      alert("Please enter valid To-do");
+      newInput.setAttribute('readonly', 'readonly');
+      editButton.textContent = 'Edit';
+    }
+  }
+  editButton.addEventListener('click', editTodo);
+
+  checkBox.addEventListener('click', isFinishedTodo);
+
+  function isFinishedTodo() {
+    if (checkBox.checked) {
+      newListItem.classList.add('checked');
+      countFinishedToDos += 1;
+      printFinishedToDos();
+    } else {
+      newListItem.classList.remove('checked');
+      countFinishedToDos -= 1;
+      printFinishedToDos();
     }
   }
 
-  const printNumber = () => (allToDos.innerText = countAllToDos);
+  if (inputValue.length) {
+    mainList.appendChild(newListItem);
+    newListItem.appendChild(checkBox);
+    newInput.value = inputValue;
+    newListItem.appendChild(newInput);
+    newListItem.appendChild(deleteButton);
+    newListItem.appendChild(editButton);
 
-  const printFinishedToDos = () =>
-    (finishedToDos.innerText = countFinishedToDos);
-
-  function getArrayFromLS() {
-    let value = localStorage.getItem("to-Dos");
-    return JSON.parse(value);
+    countAllToDos += 1;
+    printNumber();
+    let toDosFromLS = getArrayFromLS() || [];
+    setArrayToLS([
+      ...toDosFromLS,
+      {
+        value: newInput.value,
+        completed: false,
+        id: Math.floor(Math.random() * 1000),
+      },
+    ]);
+  } else {
+    alert('Please enter valid To-do');
   }
+}
 
-  function setArrayToLS(array) {
-    localStorage.removeItem("to-Dos");
-    localStorage.setItem("to-Dos", JSON.stringify(array));
-  }
+const printNumber = () => (allToDos.innerText = countAllToDos);
+
+const printFinishedToDos = () => (finishedToDos.innerText = countFinishedToDos);
+
+function getArrayFromLS() {
+  let value = localStorage.getItem('to-Dos');
+  return JSON.parse(value);
+}
+
+function setArrayToLS(array) {
+  localStorage.removeItem('to-Dos');
+  localStorage.setItem('to-Dos', JSON.stringify(array));
+}
