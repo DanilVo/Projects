@@ -105,6 +105,9 @@ function getArrayFromLS() {
 }
 
 function setArrayToLS(array) {
-  localStorage.removeItem('to-Dos');
   localStorage.setItem('to-Dos', JSON.stringify(array));
+}
+
+function removeFromLS() {
+
 }
