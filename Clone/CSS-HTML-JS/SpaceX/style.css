@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'D-DIN-BOLD';
+  src: url(/assets/font/D-DIN-Bold.otf);
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'D-DIN-BOLD';
+  color: white;
+  overflow: hidden;
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu {
+  list-style-type: none;
+  position: relative;
+  display: inline-flex;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu li {
+  margin-left: 20px;
+  font-weight: 400;
+  border-bottom: 0px solid white;
+}
+
+.header-menu li::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0.1px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.header-menu li:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.header-menu li:nth-child(9) {
+  margin-left: 250px;
+}
+
+.fa-bars {
+  position: relative;
+  display: flex;
+  left: 45px;
+}
+
+.nav-bar img {
+  display: inline;
+  width: 220px;
+  left: 40px;
+}
+
+.side-menu {
+  display: flex;
+  position: absolute;
+  list-style-type: none;
+  right: -320px;
+  height: 100vh;
+  background-color: black;
+  width: 20vw;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.active {
+  right: 0;
+}
+
+.side-menu ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: max-content;
+  right: 80px;
+  top: 35px;
+}
+
+.fa-xmark {
+  display: flex;
+  justify-content: end;
+}
+
+.side-menu ul li {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  justify-content: end;
+  line-height: 40px;
+  width: 150px;
+}
+
+.section-first {
+  background-image: url('/assets/photos/first-img.jpg');
+  width: 100;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.mission {
+  position: absolute;
+  bottom: 115px;
+  margin-left: 120px;
+}
+
+.mission span {
+  display: block;
+  position: relative;
+  font-size: larger;
+  top: 10px;
+}
+
+.mission h1 {
+  margin: 0;
+  font-size: 45px;
+}
+
+.mission button {
+  all: unset;
+  border: 2px solid white;
+  padding: 15px 50px;
+  margin-top: 20px;
+}
+
+.fa-chevron-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
