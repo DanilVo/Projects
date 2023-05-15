@@ -6,6 +6,8 @@ function showArrayFromLS() {
   let arr = JSON.parse(localStorage.getItem('to-Dos'));
   if (arr) {
     arr.forEach((todo) => {
+      const printNumber = () => (allToDos.innerText = arr.length);
+      printNumber();
       const listItemLS = document.createElement('li');
       const checkBoxLS = document.createElement('input');
       const newInputLS = document.createElement('input');
@@ -22,13 +24,23 @@ function showArrayFromLS() {
       listItemLS.appendChild(newInputLS);
       listItemLS.appendChild(deleteButtonLS);
       listItemLS.appendChild(editButtonLS);
-      deleteButtonLS.addEventListener('click', removeFromLS);
-    });
-    // console.log(arr);
-  }
 
-  function removeFromLS() {
-    let arr = JSON.parse(localStorage.getItem('to-Dos'));
-      console.log(arr[0].value);
+      let findToDoIndex = arr.findIndex((el) => el.id == todo.id);
+      deleteButtonLS.addEventListener('click', () => {
+        arr.splice(findToDoIndex, 1);
+        setArrayToLS(arr);
+        mainList.removeChild(listItemLS);
+        location.reload();
+      });
+
+      // deleteButtonLS.addEventListener('click', () =>
+      //   console.log(arr.length + 1)
+      // );
+    });
+
+    function setArrayToLS(array) {
+      localStorage.removeItem('to-Dos');
+      localStorage.setItem('to-Dos', JSON.stringify(array));
+    }
   }
 }

@@ -9,12 +9,14 @@ const allToDos = document.querySelector('#allToDos');
 let countAllToDos = 0;
 allToDos.innerText = countAllToDos;
 
+// Add a new item to the list by pressing enter
 userInput.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
     addTodo();
   }
 });
 
+// Main function add todo
 function addTodo() {
   const newListItem = document.createElement('li');
   const newInput = document.createElement('input');
@@ -27,6 +29,8 @@ function addTodo() {
 
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
+  
+  //Remove todo from dom
   const removeToDo = () => {
     if (newListItem.classList.contains('checked')) {
       newListItem.classList.remove('checked');
@@ -37,6 +41,8 @@ function addTodo() {
     countAllToDos -= 1;
     printNumber();
   };
+
+
   deleteButton.addEventListener('click', removeToDo);
 
   userInput.focus();
@@ -69,6 +75,7 @@ function addTodo() {
       countFinishedToDos -= 1;
       printFinishedToDos();
     }
+    console.log(checkBox.checked);
   }
 
   if (inputValue.length) {
