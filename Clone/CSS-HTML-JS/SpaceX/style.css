@@ -49,7 +49,7 @@ body {
 }
 
 .header-menu li:nth-child(9) {
-  margin-left: 250px;
+  /* margin-left: 250px; */
 }
 
 .fa-bars {
@@ -89,9 +89,17 @@ body {
   top: 35px;
 }
 
+.shop-bars {
+  display: inline-flex;
+  list-style-type: none;
+  position: absolute;
+  right: 120px;
+  top: 30px;
+}
+
 .fa-xmark {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .side-menu ul li {
