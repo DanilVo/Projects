@@ -31,11 +31,9 @@ function showArrayFromLS() {
         setArrayToLS(arr);
         mainList.removeChild(listItemLS);
         location.reload();
-      });
 
-      // deleteButtonLS.addEventListener('click', () =>
-      //   console.log(arr.length + 1)
-      // );
+        editButtonLS.addEventListener('click', console.log('work'))
+      });
     });
 
     function setArrayToLS(array) {

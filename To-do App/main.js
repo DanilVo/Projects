@@ -30,7 +30,7 @@ function addTodo() {
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
   
-  //Remove todo from dom
+  //Remove todo 
   const removeToDo = () => {
     if (newListItem.classList.contains('checked')) {
       newListItem.classList.remove('checked');
