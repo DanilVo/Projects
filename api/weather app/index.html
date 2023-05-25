@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="darkLight">
-            <label class="darkLightLabel" for="changeDarkLight">Dark Mode</label>
-            <input type="checkbox" id="changeDarkLight">
-        </div>
-        <header><h1>Weather App</h1></header>
-        <label>Enter location:</label>
-        <input type="text" class="locationInput">
-        <button class="setLocationBtn">Search</button>
-        <div class="cityList">
-            <ul class="cityObject">
-            </ul>
-        </div>
+      <div class="darkLight">
+        <label class="darkLightLabel" for="changeDarkLight">Dark Mode</label>
+        <input type="checkbox" id="changeDarkLight" />
+      </div>
+      <header><h1>Weather App</h1></header>
+      <fieldset>
+        <legend>
+          <label>Enter location:</label>
+        </legend>
+        <input type="text" class="locationInput" />
+      </fieldset>
+      <button class="setLocationBtn">Search</button>
+      <div class="searchHistory">
+        <label for="searchHistory">Save Search History</label>
+        <input type="checkbox" id="searchHistory" />
+      </div>
+      <div class="cityList">
+        <ul class="cityObject"></ul>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
