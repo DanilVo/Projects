@@ -41,6 +41,7 @@ h1 {
   flex-direction: column;
   height: 50vh;
   width: 20vw;
+  text-align: center;
 }
 
 h2 {
@@ -77,14 +78,14 @@ li {
   border: 2px solid #ccc;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 10px 5px 5px #ccc;
+  box-shadow: 5px 5px 10px #ccc;
   width: 25vw;
   justify-content: center;
   margin-bottom: 20px;
   height: fit-content;
 }
 
-.parent {
+.gridLi {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
