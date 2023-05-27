@@ -78,7 +78,7 @@ function weatherIcon(finalData) {
     return rain;
   } else if (getWeatherStatus === 'Snow') {
     return snow;
-  } else if (getWeatherStatus === 'Mist') {
+  } else if (getWeatherStatus === 'Mist' || getWeatherStatus === 'Fog') {
     return mist;
   } else heavyRain;
 
@@ -163,8 +163,7 @@ function dragItem() {
   
   function drag(event) {
     event.dataTransfer.setData('id', event.target.getAttribute('id'));
-    console.log("id on drag " + event.target.id);
-  }
+}
   
   sideWidget.ondrop = drop;
   
@@ -173,7 +172,6 @@ function dragItem() {
     let getEl = document.getElementById(itemId);
     try {
       event.target.append(getEl);
-      console.log("id on drop " + event.target.id);
     } catch (error) {}
   }
 }
