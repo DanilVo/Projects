@@ -21,9 +21,9 @@
       <header><h1>Weather App</h1></header>
       <fieldset>
         <legend>
-          <label>Enter location:</label>
+          <label for="location">Enter location:</label>
         </legend>
-        <input type="text" class="locationInput" />
+        <input type="text" class="locationInput" name="location" />
       </fieldset>
       <button class="setLocationBtn">Search</button>
       <div class="searchHistory">
@@ -31,17 +31,7 @@
         <input type="checkbox" id="searchHistory" />
       </div>
       <div class="cityList">
-        <ul class="cityObject">
-          <!-- <li class="parent" id="dragg" draggable="true">
-            <span class="imgSpan"> </span>
-            <span class="countryCitySpan"
-              >country: israel <br />
-              city: tel aviv
-            </span>
-            <span class="celsiusSpan">celsius: 25C </span>
-            <span class="fahrenheitSpan">fahrenheit: 80F</span>
-          </li> -->
-        </ul>
+        <ul class="cityObject"></ul>
       </div>
     </div>
     <div class="widgetHolder">
@@ -49,6 +39,7 @@
       <h6>Drag down to add widget.</h6>
       <ul class="sideWidget"></ul>
     </div>
+    <div class="currentPosition"></div>
     <script src="main.js"></script>
     <script src="renderComponent.js"></script>
   </body>
