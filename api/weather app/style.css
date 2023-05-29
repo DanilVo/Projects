@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Robotic';
+  font-family: "Robotic";
   src: url(assets/fonts/RobotoCondensed-Regular.ttf);
 }
 
@@ -10,7 +10,7 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  font-family: 'Robotic';
+  font-family: "Robotic";
 }
 
 .bodyDark {
@@ -31,8 +31,18 @@ body {
   top: 40px;
 }
 
-.currentPosition {
+.sideWidget {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 20vw;
+  text-align: center;
+}
+
+.parentCurrentPosition {
   grid-area: 1 / 3 / 2 / 3;
+}
+.currentPosition {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +51,6 @@ body {
 h1 {
   font-size: xxx-large;
   margin-bottom: 10px;
-}
-
-.sideWidget {
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  width: 20vw;
-  text-align: center;
 }
 
 h2 {

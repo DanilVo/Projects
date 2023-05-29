@@ -34,7 +34,6 @@ function getUserLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       const userPosition = `${position.coords.latitude}%2C${position.coords.longitude}`;
-      console.log(navigator.geolocation);
       setLocation(userPosition);
     });
   } else {
